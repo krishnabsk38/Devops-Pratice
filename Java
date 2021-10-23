@@ -1,0 +1,19 @@
+Install java
+=====================
+
+cd /opt
+
+yum install wget -y
+
+#url for java8 https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead
+
+
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+
+
+yum install jdk-8u131-linux-x64.rpm -y
+
+
+java -version
+
+youtube video url https://www.youtube.com/watch?v=XGVOfm8VMTU
