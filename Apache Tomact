@@ -1,0 +1,76 @@
+Install tomact
+==========================================
+
+cd /opt
+
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.zip
+
+ unzip apache-tomcat-9.0.54.zip
+ 
+ cd /opt/apache-tomcat-9.0.54/bin
+ 
+ chmod u+x *.sh
+ 
+ ln -s /opt/apache-tomcat-9.0.54/bin/startup.sh /usr/bin/startTomcat
+ 
+ ln -s /opt/apache-tomcat-9.0.54/bin/shutdown.sh /usr/bin/stopTomcat
+ 
+ startTomcat
+ 
+  ps -fax | grep tomcat
+  
+  netstat -tunlap
+  
+  cd /opt/apache-tomcat-9.0.54/webapps/
+  ls
+  docs  examples  host-manager  manager  ROOT
+  
+  cd manager
+  ls
+  css  images  index.jsp  META-INF  status.xsd  WEB-INF  xform.xsl
+  
+  cd META-INF
+  ls
+  context.xml
+  
+  vi context.xml (comment this  omment open <!-- and comment close -->)
+  
+  <!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+		 
+	 cd ../../../conf
+ls
+Catalina         catalina.properties  jaspic-providers.xml  logging.properties  tomcat-users.xml  web.xml
+catalina.policy  context.xml          jaspic-providers.xsd  server.xml          tomcat-users.xsd
+
+vi tomcat-user.xml
+
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
+  <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
+  <user username="role1" password="<must-be-changed>" roles="role1"/>
+-->
+<user username="admin" password="admin" roles="manager-gui,admin-gui"/>
+
+</tomcat-users>
+
+cd ../webapps/
+ls
+docs  examples  host-manager  manager  ROOT
+
+cd host-manager
+ls
+css  images  index.jsp  META-INF  WEB-INF
+
+cd META-INF
+ls
+context.xml
+
+vi context.xml
+
+<!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+		 
+============================================================================
