@@ -1,0 +1,49 @@
+Install Sonarqube
+
+T2.meduim redhat server
+
+yum install wget unzip -y
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.8.zip 
+
+
+ls
+
+unzip sonarqube-7.8.zip
+
+#By default sonar qube is not going to run root user bcoz of elastic search
+
+useradd admin
+
+visudo
+#under root add below module
+sonar   ALL=(ALL)       NOPASSWD: ALL
+
+chown -R sonar:sonar sonarqube-7.8
+ 
+chmod -R 775 /opt/sonarqube-7.8
+
+ su - sonar
+ 
+  cd /opt/sonarqube-7.8
+ls
+
+bin  conf  COPYING  data  elasticsearch  extensions  lib  logs  temp  web
+
+#To start sonar service
+ cd bin/
+ ls
+ jsw-license  linux-x86-64  macosx-universal-64  windows-x86-64
+ 
+ cd linux-x86-64
+ ls
+ lib  sonar.sh  wrapper
+ 
+ sh sonar.sh start
+ 
+ 
+##In pom.xml file under properties
+ 
+ <sonar.host.url>http://18.217.175.114:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password>
