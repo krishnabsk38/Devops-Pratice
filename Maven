@@ -3,7 +3,7 @@ INSTALL MAVEN
 
 
 cd /opt
-wget https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.zip
+wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.zip
 
 ls
 
