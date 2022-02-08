@@ -21,8 +21,10 @@ vi ~/.bash_profile
 export M2_HOME="/opt/apache-maven-3.8.4"
 export PATH=$PATH:M2_HOME/bin
 
+cd -
+
 source ~/.bash_profile
 
-cd -
+
 
 mvn -version
