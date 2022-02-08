@@ -3,17 +3,17 @@ Install tomact
 
 cd /opt
 
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.zip
+wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.16/bin/apache-tomcat-10.0.16.zip
 
- unzip apache-tomcat-9.0.54.zip
+ unzip  apache-tomcat-10.0.16.zip
  
- cd /opt/apache-tomcat-9.0.54/bin
+ cd /opt/apache-tomcat-10.0.16/bin
  
  chmod u+x *.sh
  
- ln -s /opt/apache-tomcat-9.0.54/bin/startup.sh /usr/bin/startTomcat
+ ln -s /opt/apache-tomcat-10.0.16/bin/startup.sh /usr/bin/startTomcat
  
- ln -s /opt/apache-tomcat-9.0.54/bin/shutdown.sh /usr/bin/stopTomcat
+ ln -s /opt/apache-tomcat-10.0.16/bin/shutdown.sh /usr/bin/stopTomcat
  
  startTomcat
  
@@ -21,7 +21,7 @@ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.z
   
   netstat -tunlap
   
-  cd /opt/apache-tomcat-9.0.54/webapps/
+  cd /opt/apache-tomcat-10.0.16/webapps/
   ls
   docs  examples  host-manager  manager  ROOT
   
@@ -33,7 +33,7 @@ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.z
   ls
   context.xml
   
-  vi context.xml (comment this  omment open <!-- and comment close -->)
+  vi context.xml (comment this  below lines comment open <!-- and comment close -->)
   
   <!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
