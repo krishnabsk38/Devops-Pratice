@@ -41,6 +41,9 @@ bin  conf  COPYING  data  elasticsearch  extensions  lib  logs  temp  web
  
  sh sonar.sh start
  
+ sh sonar.sh status
+ 
+ 
  
 ##In pom.xml file under properties
  
