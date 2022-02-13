@@ -3,17 +3,19 @@ Install tomact
 
 cd /opt
 
-wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.16/bin/apache-tomcat-10.0.16.zip
 
- unzip  apache-tomcat-10.0.16.zip
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58.zip
+
+
+ unzip  apache-tomcat-9.0.58.zip
  
- cd /opt/apache-tomcat-10.0.16/bin
+ cd /opt/apache-tomcat-9.0.58/bin
  
  chmod u+x *.sh
  
- ln -s /opt/apache-tomcat-10.0.16/bin/startup.sh /usr/bin/startTomcat
+ ln -s /opt/apache-tomcat-9.0.58/bin/startup.sh /usr/bin/startTomcat
  
- ln -s /opt/apache-tomcat-10.0.16/bin/shutdown.sh /usr/bin/stopTomcat
+ ln -s /opt/apache-tomcat-9.0.58/bin/shutdown.sh /usr/bin/stopTomcat
  
  startTomcat
  
@@ -21,7 +23,7 @@ wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.16/bin/apache-tomcat-10.0.1
   
   netstat -tunlap
   
-  cd /opt/apache-tomcat-10.0.16/webapps/
+  cd /opt/apache-tomcat-9.0.58/webapps/
   ls
   docs  examples  host-manager  manager  ROOT
   
@@ -68,7 +70,7 @@ cd META-INF
 ls
 context.xml
 
-vi context.xml
+vi context.xml  (comment this  below lines comment open <!-- and comment close -->)
 
 <!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
