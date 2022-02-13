@@ -13,7 +13,7 @@ unzip sonarqube-7.8.zip
 
 #By default sonar qube is not going to run root user bcoz of elastic search
 
-useradd admin
+useradd sonar
 
 visudo
 #under root add below module
