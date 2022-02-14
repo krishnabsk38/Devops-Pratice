@@ -33,11 +33,41 @@ bin  conf  COPYING  data  elasticsearch  extensions  lib  logs  temp  web
 #To start sonar service
  cd bin/
  ls
+ 
+ 
  jsw-license  linux-x86-64  macosx-universal-64  windows-x86-64
  
  cd linux-x86-64
  ls
  lib  sonar.sh  wrapper
+ 
+ sh sonar.sh start
+ 
+ sh sonar.sh status
+ 
+ ===================================================================================
+ after stop the instance again we hit some commands
+ =================================================================================
+ login to sonar user
+ 
+ 
+ sudo su - sonar
+ 
+ cd /opt/sonar-7.8/bin/linux-x86-64
+ 
+ sh sonar.sh start
+ 
+ sh sonar.sh status (still sonar not running)
+ 
+ cd ../..
+ 
+ cd logs
+ 
+ cat sonar.log
+ 
+ sudo rm -rf /opt/sonarqube-7.8/temp
+ 
+ cd ../bin/linux-x86-64
  
  sh sonar.sh start
  
