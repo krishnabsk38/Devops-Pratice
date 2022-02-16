@@ -17,3 +17,26 @@ yum install jdk-8u131-linux-x64.rpm -y
 java -version
 
 youtube video url https://www.youtube.com/watch?v=XGVOfm8VMTU
+
+
+
+================================================================
+
+
+java install edureka
+
+JAVA Installation
+
+SEE THAT YOU ARE IN ROOT DIRECTORY
+
+# yum install java-1.8.0-openjdk-devel
+# alternatives --config java
+
+
+
+# vim /etc/profile
+i(export path)
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.265.b01-1.amzn2.0.1.x86_64
+export PATH=$JAVA_HOME/bin:$PATH
+ESC :wq!
+# source /etc/profile
