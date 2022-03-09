@@ -1,0 +1,41 @@
+==============================
+pod defination file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    env: QA
+    author: skbonala
+    type: webserver
+spec:
+  containers:
+    - name: n1
+      image: nginx
+ =======================================================
+ 
+ Replicaset.yml
+ 
+ apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: myreplica
+ labels:
+  env: QA
+  name: skbonala
+  type: mywebserver
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+   type: nginxpod
+ template:
+  metadata:
+   name: myreplicapod
+   labels:
+    type: nginxpod
+  spec:
+    containers:
+      - name: c1
+        image : nginx
+===========================================================        
